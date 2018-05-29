@@ -36,15 +36,20 @@ group :development do
 end
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 2.13'
   gem 'factory_bot_rails'
-  gem 'faker'
+  gem 'ffaker'
+  gem 'pry-byebug'
+  gem 'pry-rails'
   gem 'rspec-rails'
-  gem 'selenium-webdriver'
 end
 
 group :test do
+  gem 'capybara', '~> 2.13'
+  gem 'chromedriver-helper'
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'selenium-webdriver'
+  gem 'shoulda-callback-matchers'
+  gem 'shoulda-matchers', '~> 3.1.1'
+  gem 'simplecov', require: false
 end
